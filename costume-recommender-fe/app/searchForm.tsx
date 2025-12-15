@@ -53,7 +53,6 @@ export default function SearchForm({ onResultFound }: SearchFormProps) {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // ✅ Формируем тело запроса строго под твой бэк
         const payload: any = {
             scaryLevel: form.scaryLevel,
             budget: form.budget,
@@ -68,7 +67,6 @@ export default function SearchForm({ onResultFound }: SearchFormProps) {
             country: form.country
         };
 
-        // ✅ age — только если введён
         if (form.age !== "" && form.age !== null) {
             payload.age = Number(form.age);
         }
@@ -239,7 +237,7 @@ export default function SearchForm({ onResultFound }: SearchFormProps) {
                             required
                         />
 
-                        {/* ✅ Age */}
+                        {/* Age */}
                         <input
                             type="number"
                             placeholder="Age (optional)"

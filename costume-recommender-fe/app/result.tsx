@@ -65,9 +65,8 @@ export default function Result({ costumeData, onBack }: ResultFormProps) {
                     ← Back to Search
                 </button>
 
-                {/* Costume Card */}
+
                 <div className="backdrop-blur-2xl bg-black/60 border-2 border-[#FF7A00]/40 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden group hover:border-[#FF7A00]/70 transition-all duration-500">
-                    {/* Background effects */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#FF7A00]/5 via-[#9B5CFF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="absolute -top-32 -right-32 w-64 h-64 bg-[#FF7A00]/20 rounded-full blur-3xl"></div>
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF7A00]/80 to-transparent"></div>

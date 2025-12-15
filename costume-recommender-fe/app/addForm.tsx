@@ -65,7 +65,6 @@ export default function AddForm() {
         }
 
         try {
-            // ✅ 1. Загружаем картинку
             const formData = new FormData();
             formData.append("file", form.image);
 
@@ -81,7 +80,6 @@ export default function AddForm() {
             const uploadResult = await uploadResponse.json();
             const imageUrl = uploadResult.imageUrl;
 
-            // ✅ 2. Собираем объект костюма для БД
             const costumePayload = {
                 name: form.name,
                 description: form.description,
@@ -100,7 +98,6 @@ export default function AddForm() {
                 imageurl: imageUrl
             };
 
-            // ✅ 3. Сохраняем костюм в БД
             const saveResponse = await fetch("http://localhost:8080/costume/save", {
                 method: "POST",
                 headers: {
@@ -113,7 +110,6 @@ export default function AddForm() {
                 throw new Error("Saving costume failed");
             }
 
-            // ✅ 4. Уведомление об успехе
             alert("✅ Costume successfully saved!");
 
             window.location.reload();
@@ -240,7 +236,7 @@ export default function AddForm() {
                             {groupTypes.map((g) => <option key={g} value={g}>{g}</option>)}
                         </select>
 
-                        {/* Age group (сразу после Group Type) */}
+                        {/* Age group */}
                         <select
                             value={form.ageGroup}
                             onChange={(e) => handleChange("ageGroup", e.target.value)}
