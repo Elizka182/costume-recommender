@@ -8,7 +8,7 @@ spring:
     baseline-on-migrate: true
 
   datasource:
-    url: jdbc:mysql://localhost:3307/recommender_db
+    url: jdbc:mysql://mysql:3306/recommender_db
     username: recommender
     password: halloween
     driver-class-name: com.mysql.cj.jdbc.Driver
