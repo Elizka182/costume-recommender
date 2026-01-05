@@ -9,7 +9,9 @@ The project aims to create an interactive web application that recommends Hallow
 
 ***Backend stack:*** Java, SpringBoot, MySQL, H2, Maven, JUnit, Spring Test, MockMvc, Scheduled Tasks, Static File Storage
 
-This project is fully containerized and requires Docker and Docker Compose to run.
+This project is fully containerized and requires Docker and Docker Compose to run. 
+
+Initial test data is available from the start and is automatically loaded into the database through Flyway migration.
 
 Make sure Docker and Docker Compose are installed on your machine before starting the application.
 
